@@ -1,0 +1,1761 @@
+a,
+input,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+body {
+  margin: 0;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body * {
+  -webkit-user-select: none;
+  font-family: Helvetica;
+}
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+#app {
+  background-color: #999;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+#app .wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #004FB6;
+}
+#app .wrap p,
+#app .wrap h1,
+#app .wrap h2,
+#app .wrap h3,
+#app .wrap h4,
+#app .wrap h5,
+#app .wrap h6 {
+  margin: 0;
+  padding: 0;
+}
+#app .wrap .main {
+  background-color: #fff;
+  height: 100%;
+  padding: 0;
+  overflow-x: hidden;
+}
+#app .wrap .main .title {
+  position: relative;
+  width: 34%;
+  height: 100%;
+  background: url(../img/left_title.jpg) no-repeat;
+  background-size: auto 100%;
+}
+#app .wrap .main .title h2 {
+  font-size: 0.92rem;
+  text-align: left;
+  padding-left: 10%;
+  font-weight: bold;
+  line-height: 1.2em;
+  position: absolute;
+  left: 0;
+  top: 12.5%;
+  color: #fff;
+}
+#app .wrap .main .title h2 span {
+  font-weight: normal;
+  font-size: 0.76rem;
+}
+#app .wrap .main .content {
+  width: 66%;
+  height: 100%;
+  position: relative;
+  padding-top: 1.6rem;
+  box-sizing: border-box;
+}
+#app .wrap .main .content .mobile_footer {
+  display: none;
+}
+#app .wrap .main .content .switch_wrap {
+  overflow: hidden;
+  transition: all .2s linear;
+  position: absolute;
+  top: 0;
+  right: -4.8rem;
+  width: 6.4rem;
+  height: 1.44rem;
+  line-height: 1.44rem;
+  text-align: left;
+  text-indent: .5em;
+  font-size: 0.6rem;
+  background: url(../img/mouseover.png);
+  background-size: 100% 100%;
+}
+#app .wrap .main .content .switch_wrap label input {
+  display: none;
+}
+#app .wrap .main .content .switch_wrap label .switch {
+  display: inline-block;
+  width: 1.1em;
+  height: 1em;
+  background: url(../img/sprite.png);
+  background-size: auto 1em;
+}
+#app .wrap .main .content .switch_wrap label a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: .5em;
+}
+#app .wrap .main .content .switch_wrap:hover {
+  right: 0rem;
+}
+#app .wrap .main .form_wrap {
+  width: 66%;
+  height: 100%;
+  position: relative;
+  padding-top: 1.6rem;
+  box-sizing: border-box;
+}
+#app .wrap .main .form_wrap .incomplete {
+  height: 0.44rem;
+}
+#app .wrap .main .form_wrap .incomplete span {
+  font-size: 0.44rem;
+  display: none;
+  color: red;
+}
+#app .wrap .main .form_wrap .form {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 0.8rem;
+  color: #004fb6;
+  overflow: hidden;
+}
+#app .wrap .main .form_wrap .form .mobile_visible {
+  display: none;
+}
+#app .wrap .main .form_wrap .form .half {
+  display: inline-block;
+  width: 49%;
+  height: 2em;
+  line-height: 2em;
+}
+#app .wrap .main .form_wrap .form .half .radio {
+  margin: 0;
+  display: inline-block;
+  margin-top: .25em;
+  margin-right: .3em;
+  overflow: hidden;
+}
+#app .wrap .main .form_wrap .form .half .radio span {
+  color: #999999;
+  height: 2em;
+  line-height: 2em;
+  width: 3.2rem;
+  text-indent: .5em;
+  border: 0.04rem solid #cccccc;
+  display: block;
+  font-size: 0.6rem;
+}
+#app .wrap .main .form_wrap .form .half .radio span i {
+  font-size: 0.8rem;
+  margin: 0;
+  display: block;
+  float: left;
+  margin-top: .25em;
+  margin-left: .5em;
+  width: 1em;
+  height: 1em;
+  background: url(../img/boy.jpg) no-repeat center;
+  background-size: auto 1em;
+}
+#app .wrap .main .form_wrap .form .half .radio input {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+#app .wrap .main .form_wrap .form .half .radio:nth-child(2) i {
+  background-image: url(../img/girl.jpg);
+}
+#app .wrap .main .form_wrap .form .half .radio:nth-child(1) input:checked ~ span {
+  color: #009de0;
+}
+#app .wrap .main .form_wrap .form .half .radio:nth-child(1) input:checked ~ span i {
+  background-image: url(../img/boy_on.jpg);
+}
+#app .wrap .main .form_wrap .form .half .radio:nth-child(2) input:checked ~ span {
+  color: #d40289;
+}
+#app .wrap .main .form_wrap .form .half .radio:nth-child(2) input:checked ~ span i {
+  background-image: url(../img/girl_on.jpg);
+}
+#app .wrap .main .form_wrap .form .half input {
+  display: inline-block;
+  font-size: 0.6rem;
+}
+#app .wrap .main .form_wrap .form .half .input_name {
+  margin-top: 0.2rem;
+  height: 1.2rem;
+  width: 7rem;
+}
+#app .wrap .main .form_wrap .form .half .input_age {
+  margin-top: 0.2rem;
+  height: 1.2rem;
+  width: 1.6rem;
+}
+#app .wrap .main .form_wrap .form .half .input_age::-webkit-outer-spin-button,
+#app .wrap .main .form_wrap .form .half .input_age::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#app .wrap .main .form_wrap .form .half .input_age[type="number"] {
+  -moz-appearance: textfield;
+}
+#app .wrap .main .form_wrap .form .half .calculate {
+  color: #59b337;
+}
+#app .wrap .main .form_wrap .form .half select {
+  font-size: 0.6rem;
+  color: #000000;
+}
+#app .wrap .main .form_wrap .form .half .tips {
+  display: none;
+  color: red;
+  margin-left: 1em;
+  font-size: 0.52rem;
+}
+#app .wrap .main .form_wrap .form .half_left {
+  float: left;
+  text-align: right;
+}
+#app .wrap .main .form_wrap .form .half_right {
+  float: right;
+  text-align: left;
+}
+#app .wrap .main .form_wrap .form .degree {
+  display: none;
+  font-size: 0.5rem;
+}
+#app .wrap .main .form_wrap .form .degree label input {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+#app .wrap .main .form_wrap .form .degree label span {
+  display: inline-block;
+  background: url(../img/check.jpg) no-repeat left center;
+  background-size: 1em 1em;
+  text-indent: 1.25em;
+  margin-left: .5em;
+}
+#app .wrap .main .form_wrap .form .degree label input:checked ~ span {
+  background: url(../img/check_on.jpg) no-repeat left center;
+  background-size: 1em 1em;
+}
+#app .wrap .main .form_wrap .form .next {
+  border-radius: 0;
+  width: 6.6rem;
+  background-color: #004fb6;
+  color: #fff;
+}
+#app .wrap .main .form_wrap .cut_off {
+  border-bottom: 0.06rem dashed #dddddd;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+#app .wrap .main .planned {
+  padding: 0;
+}
+#app .wrap .main .planned .switch_wrap .back {
+  display: none;
+}
+#app .wrap .main .planned .planned_wrap {
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+  color: #004FB6;
+  font-size: 0.8rem;
+}
+#app .wrap .main .planned .planned_wrap .aside {
+  width: 60%;
+  margin: 1em auto;
+}
+#app .wrap .main .planned .planned_wrap .aside span {
+  color: #004FB6;
+}
+#app .wrap .main .planned .planned_wrap .aside input::-webkit-outer-spin-button,
+#app .wrap .main .planned .planned_wrap .aside input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+#app .wrap .main .planned .planned_wrap .aside input[type="number"] {
+  -moz-appearance: textfield;
+}
+#app .wrap .main .planned .planned_wrap .tips {
+  width: 60%;
+  margin: 0 auto;
+  text-align: right;
+  font-size: 0.48rem;
+  color: red;
+  opacity: 0;
+}
+#app .wrap .main .planned .planned_wrap .btn_wrap {
+  margin-top: 2em;
+  overflow: hidden;
+}
+#app .wrap .main .planned .planned_wrap .btn_wrap input {
+  width: 40%;
+}
+#app .wrap .main .planned .planned_wrap .btn_wrap .back {
+  float: left;
+  background-color: #888888;
+  color: #ffffff;
+}
+#app .wrap .main .planned .planned_wrap .btn_wrap .next {
+  float: right;
+  background-color: #004FB6;
+  color: #ffffff;
+}
+#app .wrap .main .showRes .back_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#app .wrap .main .showRes .back_btn .btn {
+  padding: 0;
+  border-radius: 0;
+  height: 1rem;
+  line-height: 1rem;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 0.5rem;
+  background-color: #004FB6;
+  color: #fff;
+}
+#app .wrap .main .showRes .switch_wrap .back {
+  display: none;
+}
+#app .wrap .main .showRes .showRes_wrap {
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+  color: #5f5f5f;
+  font-size: 0.6rem;
+}
+#app .wrap .main .showRes .showRes_wrap .cut_off {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.06rem dashed #dddddd;
+}
+#app .wrap .main .showRes .showRes_wrap .view_wrap {
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  width: 100%;
+  height: 7.2rem;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap {
+  width: 45%;
+  margin: 0 auto;
+  position: relative;
+  color: #004FB6;
+  margin-bottom: 2.4rem;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .index_btn {
+  position: absolute;
+  left: 0;
+  bottom: -1.6rem;
+  width: 100%;
+  height: 1em;
+  text-align: center;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .index_btn ol {
+  display: inline-block;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .index_btn ol li {
+  margin: 0;
+  float: left;
+  margin-right: 0.32rem;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 0.16rem;
+  background-color: #9C9C9C;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .index_btn ol li:first-child {
+  background-color: #004FB6;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .index_btn ol li:last-child {
+  margin-right: 0;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .next,
+#app .wrap .main .showRes .showRes_wrap .con_wrap .prev {
+  position: absolute;
+  top: 0;
+  width: 8%;
+  height: 100%;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .prev {
+  background: url(../img/lan-lbtn.jpg) no-repeat center;
+  background-size: 60% auto;
+  left: -20%;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .next {
+  background: url(../img/lan-rbtn.jpg) no-repeat center;
+  background-size: 60% auto;
+  right: -20%;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .con {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .con h3 {
+  font-size: 0.6rem;
+  width: 100%;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .con p {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 0.36rem;
+  text-align: left;
+  margin-top: 1em;
+}
+#app .wrap .main .showRes .showRes_wrap .con_wrap .con p span {
+  display: block;
+  float: left;
+  font-size: 0.72rem;
+  margin-left: 0.32rem;
+  margin-right: 0.32rem;
+}
+#app .wrap .main .showRes .showRes_wrap .btn_wrap {
+  overflow: hidden;
+}
+#app .wrap .main .showRes .showRes_wrap .btn_wrap a {
+  width: 48%;
+  height: 1.2rem;
+  font-size: 0.48rem;
+  font-weight: bold;
+  padding: 0;
+  line-height: 1.2rem;
+}
+#app .wrap .main .showRes .showRes_wrap .btn_wrap .more {
+  float: left;
+  background-color: #888888;
+  color: #ffffff;
+}
+#app .wrap .main .showRes .showRes_wrap .btn_wrap .ask {
+  float: right;
+  background-color: #004FB6;
+  color: #ffffff;
+}
+#app .wrap .screen_overlay {
+  text-align: center;
+  background: rgba(2, 56, 126, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+#app .wrap .screen_overlay .switch_wrap {
+  height: 1rem;
+  line-height: 1rem;
+  background: rgba(2, 56, 126, 0.9);
+  text-align: right;
+  font-size: 0.6rem;
+}
+#app .wrap .screen_overlay .switch_wrap .switch {
+  display: inline-block;
+  width: 1.1em;
+  height: 1em;
+  background: url(../img/sprite.png);
+  background-size: auto 1em;
+}
+#app .wrap .screen_overlay .switch_wrap a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: .5em;
+}
+#app .wrap .screen_overlay .accept {
+  width: 60%;
+  height: 85%;
+  margin: 4% auto;
+  font-size: 0.4rem;
+  background-color: #fff;
+  position: relative;
+}
+#app .wrap .screen_overlay .accept .banner {
+  height: 6.4rem;
+  background: url(../img/vector.png) #ffffff no-repeat left top;
+  background-size: 100%;
+  position: relative;
+}
+#app .wrap .screen_overlay .accept .banner .introduction {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 54%;
+}
+#app .wrap .screen_overlay .accept .banner .tips {
+  position: absolute;
+  top: 16%;
+  left: 5%;
+  text-align: left;
+  font-size: 0.6rem;
+  color: #02387e;
+}
+#app .wrap .screen_overlay .accept .banner .logo {
+  position: absolute;
+  top: 16%;
+  right: 5%;
+  width: 16%;
+}
+#app .wrap .screen_overlay .accept .banner .mobile_switch {
+  display: none;
+}
+#app .wrap .screen_overlay .accept .content {
+  display: inline-block;
+  text-align: left;
+  font-size: 0.5rem;
+  width: 90%;
+  line-height: 1.5em;
+}
+#app .wrap .screen_overlay .accept .content a,
+#app .wrap .screen_overlay .accept .content h2 {
+  font-size: 0.5rem;
+  text-decoration: underline;
+}
+#app .wrap .screen_overlay .accept .content h2 {
+  margin-bottom: .5em;
+}
+#app .wrap .screen_overlay .accept .content .btn {
+  text-decoration: none;
+  margin-top: 1.5em;
+  width: 6rem;
+  height: 1.2rem;
+  background-color: #004FB6;
+  background-size: 6rem 1.2rem;
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.6rem;
+}
+#app .wrap .screen_overlay .accept .mobile_logo {
+  display: none;
+}
+#app .wrap .screen_overlay .askPage {
+  width: 60%;
+  height: 90%;
+  margin: 4% auto;
+  font-size: 0.4rem;
+  background-color: #fff;
+  position: relative;
+}
+#app .wrap .screen_overlay .askPage .title {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  background-color: #E2E2E2;
+  color: #004FB6;
+}
+#app .wrap .screen_overlay .askPage .title .close {
+  display: block;
+  margin-right: 0.4rem;
+  margin-top: 0.4rem;
+  float: right;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(../img/close.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+#app .wrap .screen_overlay .askPage .content {
+  display: inline-block;
+  width: 90%;
+  padding-top: 1em;
+  box-sizing: border-box;
+}
+#app .wrap .screen_overlay .askPage .content .success {
+  display: none;
+  color: #7a2182;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 2rem;
+  line-height: 1.2rem;
+}
+#app .wrap .screen_overlay .askPage .content .success span {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.48rem;
+  display: block;
+  color: #004FB6;
+}
+#app .wrap .screen_overlay .askPage .content .con_part {
+  width: 48%;
+  text-align: left;
+  margin-bottom: 0.6rem;
+}
+#app .wrap .screen_overlay .askPage .content .con_part .msg {
+  width: 100%;
+}
+#app .wrap .screen_overlay .askPage .content .con_part .msg span {
+  color: #004FB6;
+}
+#app .wrap .screen_overlay .askPage .content .con_part .tips {
+  opacity: 0;
+  text-indent: 1em;
+  color: red;
+  font-size: 0.36rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+#app .wrap .screen_overlay .askPage .content .ask_txt {
+  font-family: Arial;
+  text-align: left;
+  font-size: 0.36rem;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  height: 6.4rem;
+  overflow-y: auto;
+  border: 0.06rem solid #cccccc;
+  margin-bottom: .5em;
+}
+#app .wrap .screen_overlay .askPage .content .ask_txt b {
+  text-decoration: underline;
+}
+#app .wrap .screen_overlay .askPage .content .ask_txt .ask_mt1 {
+  margin-top: 1em;
+}
+#app .wrap .screen_overlay .askPage .content .ask_txt .ask_mt1 .ask_pl {
+  padding-left: 5em;
+  box-sizing: border-box;
+}
+#app .wrap .screen_overlay .askPage .content .ask_tips {
+  font-size: 0.32rem;
+  color: red;
+  text-align: left;
+  text-indent: 0.96rem;
+  opacity: 0;
+}
+#app .wrap .screen_overlay .askPage .content .ask_agree {
+  margin-top: .8em;
+  font-size: 0.32rem;
+  text-align: left;
+}
+#app .wrap .screen_overlay .askPage .content .ask_agree .check {
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 0.02rem solid #000000;
+  float: left;
+}
+#app .wrap .screen_overlay .askPage .content .ask_agree .check label {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+#app .wrap .screen_overlay .askPage .content .ask_agree .check label input {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+#app .wrap .screen_overlay .askPage .content .ask_agree .check label i {
+  margin: 0 auto;
+  margin-top: 0.02rem;
+  border: 0.08rem solid #ffffff;
+  display: block;
+  width: 0.24rem;
+  height: 0.36rem;
+  border-top: none;
+  border-left: none;
+  transform: rotateZ(45deg);
+}
+#app .wrap .screen_overlay .askPage .content .ask_agree .check label input:checked ~ i {
+  border: 0.08rem solid #004fb6;
+  border-top: none;
+  border-left: none;
+}
+#app .wrap .screen_overlay .askPage .content .ask_agree .ask_agree_con {
+  width: 95%;
+  float: right;
+}
+#app .wrap .screen_overlay .askPage .content .btn {
+  margin-top: 1em;
+  text-decoration: none;
+  width: 4.8rem;
+  background-color: #004FB6;
+  border-radius: 0;
+  color: #fff;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+#app .wrap .screen_overlay .more {
+  width: 60%;
+  height: 85%;
+  margin: 4% auto;
+  font-size: 0.4rem;
+  background-color: #fff;
+  position: relative;
+}
+#app .wrap .screen_overlay .more .title {
+  height: 12%;
+  font-weight: bold;
+  background-color: #023d83;
+  color: #fff;
+}
+#app .wrap .screen_overlay .more .title .close {
+  display: block;
+  margin-right: 0.6rem;
+  margin-top: 0.6rem;
+  float: right;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url(../img/close.jpg) no-repeat center;
+  background-size: 100% 100%;
+}
+#app .wrap .screen_overlay .more .content {
+  width: 100%;
+  height: 82%;
+  position: relative;
+  overflow: hidden;
+  background-color: #999999;
+}
+#app .wrap .screen_overlay .more .content .prev,
+#app .wrap .screen_overlay .more .content .next {
+  position: absolute;
+  top: 45%;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: #000;
+}
+#app .wrap .screen_overlay .more .content .prev {
+  background: url(../img/showl-btn.png) no-repeat center;
+  background-size: auto 100%;
+  left: 0.3rem;
+}
+#app .wrap .screen_overlay .more .content .next {
+  background: url(../img/showr-btn.png) no-repeat center;
+  background-size: auto 100%;
+  right: 0.3rem;
+}
+#app .wrap .screen_overlay .more .content .calculation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  background-color: #C8C8C8;
+  padding: 0.8rem 1.2rem;
+  box-sizing: border-box;
+}
+#app .wrap .screen_overlay .more .content .calculation h4 {
+  padding-bottom: 0.4rem;
+  border-bottom: 0.02rem solid #ffffff;
+  font-weight: bold;
+  color: #023D84;
+}
+#app .wrap .screen_overlay .more .content .calculation .calculation_txt {
+  padding: 0 1em;
+  padding-bottom: 0.4rem;
+  border-bottom: 0.02rem solid #ffffff;
+}
+#app .wrap .screen_overlay .more .content .calculation .calculation_txt p {
+  margin-top: 1em;
+  font-size: 0.4rem;
+}
+#app .wrap .screen_overlay .more .content .calculation .calculation_txt p .tag {
+  padding: 0 0.1rem;
+  font-weight: bold;
+  background-color: #7B7B7B;
+  color: #fff;
+}
+#app .wrap .screen_overlay .more .content .calculation .calculation_txt p .under {
+  vertical-align: baseline;
+  position: relative;
+  top: 0.04rem;
+  display: inline-block;
+  transform: scale(0.8);
+  margin: 0 -0.2em;
+}
+#app .wrap .screen_overlay .more .content .calculation .calculation_txt p .on {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.08rem;
+  display: inline-block;
+  transform: scale(0.8);
+  margin: 0 -0.1em;
+}
+#app .wrap .screen_overlay .more .content .calculation .formula {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  text-indent: .5em;
+}
+#app .wrap .screen_overlay .more .content .calculation .formula .blue {
+  font-weight: bold;
+  color: #023D84;
+}
+#app .wrap .screen_overlay .more .content .calculation .formula .green {
+  font-weight: bold;
+  color: #008707;
+}
+#app .wrap .screen_overlay .more .content .calculation .formula .on {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.08rem;
+  display: inline-block;
+  transform: scale(0.8);
+  margin: 0 -0.1em;
+}
+#app .wrap .screen_overlay .more .content .calculation .balance {
+  font-weight: bold;
+  background-color: #fff;
+}
+#app .wrap .screen_overlay .more .content .clude {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con {
+  text-align: center;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con .clude_title {
+  color: #FFD900;
+  overflow: hidden;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con .clude_title h5 {
+  margin-top: 5em;
+  font-size: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con .clude_title h2 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con .clude_view {
+  width: 100%;
+  font-size: 0.32rem;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex {
+  color: #FDED89;
+  width: 100%;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex p {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  padding-top: 2.4rem;
+  box-sizing: border-box;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex .entertainment {
+  background: url(../img/entertainment.png) no-repeat center 1rem;
+  background-size: auto 1rem;
+}
+#app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex .clothes {
+  background: url(../img/clothes.png) no-repeat center 1rem;
+  background-size: auto 1rem;
+}
+#app .wrap .screen_overlay .more .content .clude .include {
+  float: left;
+  width: 64%;
+  height: 100%;
+  background-color: #8A8A8A;
+}
+#app .wrap .screen_overlay .more .content .clude .exclude {
+  float: right;
+  width: 36%;
+  height: 100%;
+  background-color: #737373;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #606060;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .title {
+  background-color: transparent;
+  color: #FF9600;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 0.06rem dashed #8a8a8a;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .subtitle {
+  margin: 1rem 0;
+  color: #fff;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap {
+  width: 50%;
+  height: 40%;
+  margin: 0 auto;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap .part {
+  color: #fff;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap .part dl {
+  overflow: hidden;
+  margin: 0;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap .part dl dt {
+  margin: 0 auto;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap .left_part {
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap .left_part dl dd {
+  margin-top: 1em;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap .right_part {
+  float: right;
+  width: 60%;
+  height: 100%;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap .right_part dl {
+  float: left;
+  width: 50%;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .view_wrap .right_part dl dd {
+  margin-top: .25em;
+}
+#app .wrap .screen_overlay .more .content .tuitionFee .remark {
+  color: #C7C7C7;
+  width: 76%;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 3em;
+  font-size: 0.32rem;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #606060;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .title {
+  background-color: transparent;
+  color: #FF9600;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom: 0.06rem dashed #8a8a8a;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .subtitle {
+  margin: 1rem 0;
+  color: #fff;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap {
+  width: 50%;
+  height: 40%;
+  margin: 0 auto;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap .part {
+  color: #fff;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap .part dl {
+  overflow: hidden;
+  margin: 0;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap .part dl dt {
+  margin: 0 auto;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap .left_part {
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap .left_part dl dd {
+  margin-top: 1em;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap .right_part {
+  float: right;
+  width: 60%;
+  height: 100%;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap .right_part dl {
+  float: left;
+  width: 50%;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .view_wrap .right_part dl dd {
+  margin-top: .25em;
+}
+#app .wrap .screen_overlay .more .content .costOfLiving .remark {
+  color: #C7C7C7;
+  width: 76%;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 3em;
+  font-size: 0.32rem;
+}
+#app .wrap .screen_overlay .more .content .source {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+#app .wrap .screen_overlay .more .content .source .source_txt {
+  text-align: left;
+  width: 82%;
+  height: 87%;
+  margin: 2em auto;
+  box-sizing: border-box;
+  overflow: auto;
+}
+#app .wrap .screen_overlay .more .content .source .source_txt h4 {
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: #023D84;
+}
+#app .wrap .screen_overlay .more .content .source .source_txt p {
+  font-size: 0.36rem;
+  margin-bottom: 1em;
+}
+#app .wrap .screen_overlay .more .content .source .source_txt p a {
+  text-decoration: underline;
+}
+#app .wrap .screen_overlay .more .content .source .source_txt p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+#app .wrap .screen_overlay .more .content .source .source_txt p i {
+  font-style: italic;
+  font-weight: bold;
+}
+#app .wrap .screen_overlay .more .content .source .source_txt p em {
+  font-weight: bold;
+}
+#app .wrap .screen_overlay .more .index_btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #023d83;
+  width: 100%;
+  height: 6%;
+}
+#app .wrap .screen_overlay .more .index_btn ol {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+#app .wrap .screen_overlay .more .index_btn ol li {
+  display: inline-block;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 0.16rem;
+  background-color: #9C9C9C;
+  margin-right: 0.32rem;
+}
+#app .wrap .screen_overlay .more .index_btn ol li:first-child {
+  background-color: #fff;
+}
+#app .wrap .screen_overlay .more .index_btn ol li:last-child {
+  margin-right: 0;
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  #app .wrap .main {
+    position: relative;
+    background-color: #EEEEEE;
+  }
+  #app .wrap .main .title {
+    position: absolute;
+    top: 6.4rem;
+    left: 0;
+    transform-origin: left top;
+    transform: rotateZ(-93deg);
+    background: #004FB6;
+    overflow: initial;
+  }
+  #app .wrap .main .title h2 {
+    position: absolute;
+    transform: rotateZ(93deg);
+    top: 5rem;
+    left: -4rem;
+    text-align: right;
+    height: 1em;
+    width: 12rem;
+    padding: 0;
+  }
+  #app .wrap .main .title h2 .br {
+    display: none;
+  }
+  #app .wrap .main .content {
+    width: 100%;
+    height: auto;
+    padding-top: 6.8rem;
+    padding-bottom: 3em;
+  }
+  #app .wrap .main .content .mobile_footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    background-color: #ffd900;
+    text-indent: 1em;
+    text-align: left;
+  }
+  #app .wrap .main .content .mobile_footer img {
+    height: 1.5em;
+  }
+  #app .wrap .main .content .switch_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 2.4rem;
+    background: none;
+    background-color: #ffd900;
+    overflow: initial;
+    z-index: 100;
+  }
+  #app .wrap .main .content .switch_wrap label {
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  #app .wrap .main .content .switch_wrap label input {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    display: block;
+  }
+  #app .wrap .main .content .switch_wrap label .switch {
+    background-image: url(../img/lan_icon.png);
+    background-size: 1.7rem 1.62rem;
+    width: 1.7rem;
+    height: 1.62rem;
+    position: absolute;
+    top: 0.4rem;
+    right: 1.6rem;
+    float: right;
+  }
+  #app .wrap .main .content .switch_wrap label a {
+    display: none;
+    background-color: #004fb6;
+    margin: 0;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    text-align: right;
+    font-size: 1rem;
+    padding-right: 1.6rem;
+    border-bottom: 0.06rem solid #007aff;
+  }
+  #app .wrap .main .content .switch_wrap label input:checked ~ a {
+    display: block;
+  }
+  #app .wrap .main .form_wrap {
+    width: 100%;
+    height: auto;
+    padding-top: 6.8rem;
+    padding-bottom: 4rem;
+  }
+  #app .wrap .main .form_wrap .form {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  #app .wrap .main .form_wrap .form .mobile_visible {
+    display: block;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    overflow: hidden;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center .radio {
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 4.8rem;
+    background-color: #fff;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center .radio span {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 4em;
+    font-size: 0.8rem;
+    font-weight: normal;
+    box-sizing: border-box;
+    text-indent: 0;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center .radio span i {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin: 0;
+    margin-left: -0.5em;
+    display: inline;
+    font-size: 2.8rem;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center .input_name {
+    width: 100%;
+    height: 2rem;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center .selectCountry {
+    display: none;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center .mobile_SC {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    color: #000000;
+    background-color: #fff;
+    border: 0.06rem solid #aaaaaa;
+    margin-bottom: 0.6rem;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center .next {
+    font-size: 1rem;
+    width: 100%;
+    height: 2.4rem;
+  }
+  #app .wrap .main .form_wrap .form .mobile_center .tips {
+    display: none;
+  }
+  #app .wrap .main .form_wrap .form .calculate_group_one {
+    display: none;
+  }
+  #app .wrap .main .form_wrap .form .calculate_group_two .mobile_visible {
+    display: inline-block;
+  }
+  #app .wrap .main .form_wrap .form .degree {
+    width: 100%;
+    height: 4.8rem;
+    text-align: center;
+  }
+  #app .wrap .main .form_wrap .form .degree .degree_tips {
+    display: none;
+  }
+  #app .wrap .main .form_wrap .form .degree .degree_left {
+    float: left;
+  }
+  #app .wrap .main .form_wrap .form .degree .degree_right {
+    float: right;
+  }
+  #app .wrap .main .form_wrap .form .degree label {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 32%;
+    height: 100%;
+    background-color: #ffffff;
+  }
+  #app .wrap .main .form_wrap .form .degree label input {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  #app .wrap .main .form_wrap .form .degree label span {
+    margin: 0;
+    text-indent: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 60%;
+    color: #999999;
+    font-weight: normal;
+    text-align: center;
+  }
+  #app .wrap .main .form_wrap .form .degree label input:checked ~ span {
+    color: #004FB6;
+  }
+  #app .wrap .main .form_wrap .form .degree label:nth-of-type(1) span {
+    background: url(../img/general.jpg) no-repeat center 30%;
+    background-size: auto 60%;
+  }
+  #app .wrap .main .form_wrap .form .degree label:nth-of-type(2) span {
+    background: url(../img/medicine.jpg) no-repeat center 30%;
+    background-size: auto 60%;
+  }
+  #app .wrap .main .form_wrap .form .degree label:nth-of-type(3) span {
+    background: url(../img/law.jpg) no-repeat center 30%;
+    background-size: auto 60%;
+  }
+  #app .wrap .main .form_wrap .form .degree label:nth-of-type(1) input:checked ~ span {
+    background: url(../img/general_on.jpg) no-repeat center 30%;
+    background-size: auto 60%;
+  }
+  #app .wrap .main .form_wrap .form .degree label:nth-of-type(2) input:checked ~ span {
+    background: url(../img/medicine_on.jpg) no-repeat center 30%;
+    background-size: auto 60%;
+  }
+  #app .wrap .main .form_wrap .form .degree label:nth-of-type(3) input:checked ~ span {
+    background: url(../img/law_on.jpg) no-repeat center 30%;
+    background-size: auto 60%;
+  }
+  #app .wrap .main .form_wrap .mobile_half {
+    width: 50%;
+    float: left;
+  }
+  #app .wrap .main .form_wrap .mobile_half .mobile_center {
+    width: 90%;
+    line-height: 1em;
+  }
+  #app .wrap .main .form_wrap .mobile_half .mobile_center .input_age {
+    display: none;
+  }
+  #app .wrap .main .form_wrap .mobile_half .mobile_center .mobile_age {
+    display: block;
+    width: 98%;
+    height: 4.8rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #004fb6;
+    background-color: #fff;
+  }
+  #app .wrap .main .form_wrap .mobile_half .mobile_input_tips {
+    height: 2em;
+  }
+  #app .wrap .main .form_wrap .mobile_half_left .mobile_center {
+    float: right;
+  }
+  #app .wrap .main .form_wrap .mobile_half_left .mobile_center .mobile_age {
+    float: left;
+  }
+  #app .wrap .main .form_wrap .mobile_half_right .mobile_center {
+    float: left;
+  }
+  #app .wrap .main .form_wrap .mobile_half_right .mobile_center .mobile_age {
+    float: right;
+  }
+  #app .wrap .main .form_wrap .cut_off {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  #app .wrap .main .form_wrap .mobile_cut_off {
+    border-bottom: 0.06rem dashed #000000;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+  #app .wrap .main .planned {
+    padding: 0;
+  }
+  #app .wrap .main .planned .switch_wrap .back {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-family: simsun;
+    font-size: 1.2rem;
+    color: #004FB6;
+    width: 2em;
+    text-align: center;
+  }
+  #app .wrap .main .planned .planned_wrap {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  #app .wrap .main .planned .planned_wrap .aside {
+    width: 80%;
+    margin: 1em auto;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+  #app .wrap .main .planned .planned_wrap .aside span {
+    font-size: 0.8rem;
+  }
+  #app .wrap .main .planned .planned_wrap .aside input {
+    font-size: 0.8rem;
+  }
+  #app .wrap .main .planned .planned_wrap .tips {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.8rem;
+    color: red;
+    opacity: 0;
+  }
+  #app .wrap .main .planned .planned_wrap .btn_wrap .back {
+    display: none;
+  }
+  #app .wrap .main .planned .planned_wrap .btn_wrap .next {
+    float: none;
+    width: 80%;
+    margin: 0 auto;
+    height: 2em;
+    line-height: 2em;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  #app .wrap .main .showRes .switch_wrap .back {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-family: simsun;
+    font-size: 1.2rem;
+    color: #004FB6;
+    width: 2em;
+    text-align: center;
+  }
+  #app .wrap .main .showRes .showRes_wrap {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  #app .wrap .main .showRes .showRes_wrap .cut_off {
+    margin-top: 1em;
+    padding-bottom: .5em;
+    border-color: #999;
+  }
+  #app .wrap .main .showRes .showRes_wrap .view_wrap {
+    height: 8rem;
+    font-size: 1.2rem;
+  }
+  #app .wrap .main .showRes .showRes_wrap .con_wrap {
+    width: 80%;
+    margin-bottom: 1em;
+  }
+  #app .wrap .main .showRes .showRes_wrap .con_wrap .index_btn {
+    bottom: -1em;
+  }
+  #app .wrap .main .showRes .showRes_wrap .con_wrap .next,
+  #app .wrap .main .showRes .showRes_wrap .con_wrap .prev {
+    width: 10%;
+  }
+  #app .wrap .main .showRes .showRes_wrap .con_wrap .prev {
+    left: -10%;
+  }
+  #app .wrap .main .showRes .showRes_wrap .con_wrap .next {
+    right: -10%;
+  }
+  #app .wrap .main .showRes .showRes_wrap .con_wrap .con h3 {
+    font-size: 1.2rem;
+  }
+  #app .wrap .main .showRes .showRes_wrap .con_wrap .con p {
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  #app .wrap .main .showRes .showRes_wrap .con_wrap .con p span {
+    font-size: 1.6rem;
+  }
+  #app .wrap .main .showRes .showRes_wrap .btn_wrap a {
+    display: block;
+    width: 100%;
+    float: none;
+    border-radius: 0;
+    font-size: 1.2rem;
+    height: 2em;
+    line-height: 2em;
+    padding: 0;
+  }
+  #app .wrap .screen_overlay {
+    background: rgba(2, 56, 126, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+  }
+  #app .wrap .screen_overlay .switch_wrap {
+    display: none;
+  }
+  #app .wrap .screen_overlay .accept {
+    width: 80%;
+    height: 95%;
+    margin: 1em auto;
+  }
+  #app .wrap .screen_overlay .accept .banner {
+    height: 24%;
+    background-size: 150%;
+    position: relative;
+  }
+  #app .wrap .screen_overlay .accept .banner .introduction {
+    position: static;
+    margin-top: 1em;
+    width: 80%;
+  }
+  #app .wrap .screen_overlay .accept .banner .tips {
+    display: none;
+  }
+  #app .wrap .screen_overlay .accept .banner .logo {
+    display: none;
+  }
+  #app .wrap .screen_overlay .accept .banner .mobile_switch {
+    display: block;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  #app .wrap .screen_overlay .accept .banner .mobile_switch a {
+    font-size: 0.8rem;
+    margin-right: 1em;
+  }
+  #app .wrap .screen_overlay .accept .content {
+    font-size: 0.64rem;
+  }
+  #app .wrap .screen_overlay .accept .content a,
+  #app .wrap .screen_overlay .accept .content h2 {
+    font-size: 0.64rem;
+  }
+  #app .wrap .screen_overlay .accept .content .btn {
+    width: 100%;
+    height: 2rem;
+    background-size: 100% 100%;
+  }
+  #app .wrap .screen_overlay .accept .mobile_logo {
+    display: block;
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    background-color: #ffd900;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-indent: 1em;
+  }
+  #app .wrap .screen_overlay .accept .mobile_logo img {
+    height: 1.5em;
+  }
+  #app .wrap .screen_overlay .askPage {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding-top: 6.8rem;
+  }
+  #app .wrap .screen_overlay .askPage .title {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 6.4rem;
+    left: 0;
+    transform-origin: left top;
+    transform: rotateZ(-93deg);
+    background: #004FB6;
+    overflow: initial;
+  }
+  #app .wrap .screen_overlay .askPage .title .title_txt {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 1.2em;
+    position: absolute;
+    transform: rotateZ(93deg);
+    top: 5rem;
+    left: -4rem;
+    text-align: right;
+    height: 1em;
+    width: 14rem;
+    padding: 0;
+  }
+  #app .wrap .screen_overlay .askPage .title .close {
+    color: #fff;
+    position: absolute;
+    transform: rotateZ(93deg);
+    top: 15.8rem;
+    left: 3.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0;
+  }
+  #app .wrap .screen_overlay .askPage .content {
+    width: 90%;
+    height: 100%;
+    padding-bottom: 1em;
+    overflow-y: auto;
+  }
+  #app .wrap .screen_overlay .askPage .content .success {
+    font-size: 2.4rem;
+    height: 4rem;
+    line-height: 2.4rem;
+  }
+  #app .wrap .screen_overlay .askPage .content .success span {
+    height: 1.6rem;
+    line-height: 1.6rem;
+    font-size: 1rem;
+  }
+  #app .wrap .screen_overlay .askPage .content .con_part {
+    width: 100%;
+    overflow: hidden;
+    float: none !important;
+    margin-bottom: 2em;
+  }
+  #app .wrap .screen_overlay .askPage .content .con_part .tips {
+    height: 2em;
+    line-height: 2em;
+  }
+  #app .wrap .screen_overlay .askPage .content .ask_txt {
+    height: auto;
+    overflow-y: initial;
+  }
+  #app .wrap .screen_overlay .askPage .content .ask_txt .ask_mt1 .ask_pl {
+    padding-left: 2em;
+  }
+  #app .wrap .screen_overlay .askPage .content .ask_agree .check {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  #app .wrap .screen_overlay .askPage .content .ask_agree .check label i {
+    margin-top: 0.08rem;
+    width: 0.48rem;
+    height: 0.72rem;
+    border: 0.16rem solid #ffffff;
+    border-top: none;
+    border-left: none;
+  }
+  #app .wrap .screen_overlay .askPage .content .ask_agree .check label input:checked ~ i {
+    border: 0.16rem solid #004fb6;
+    border-top: none;
+    border-left: none;
+  }
+  #app .wrap .screen_overlay .askPage .content .ask_agree .ask_agree_con {
+    width: 90%;
+  }
+  #app .wrap .screen_overlay .askPage .content .btn {
+    width: 100%;
+  }
+  #app .wrap .screen_overlay .more {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  #app .wrap .screen_overlay .more .title {
+    height: 0;
+    position: relative;
+  }
+  #app .wrap .screen_overlay .more .title span {
+    display: none;
+  }
+  #app .wrap .screen_overlay .more .title .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  #app .wrap .screen_overlay .more .content {
+    height: 100%;
+  }
+  #app .wrap .screen_overlay .more .content .prev,
+  #app .wrap .screen_overlay .more .content .next {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  #app .wrap .screen_overlay .more .content .prev {
+    left: 0;
+  }
+  #app .wrap .screen_overlay .more .content .next {
+    right: 0;
+  }
+  #app .wrap .screen_overlay .more .content .calculation {
+    padding: 2rem 1.2rem;
+    overflow: auto;
+  }
+  #app .wrap .screen_overlay .more .content .calculation .calculation_txt p {
+    font-size: 0.8rem;
+  }
+  #app .wrap .screen_overlay .more .content .calculation .formula {
+    height: auto;
+    font-size: 0.8rem;
+  }
+  #app .wrap .screen_overlay .more .content .clude .clude_con {
+    float: none;
+    width: 100%;
+  }
+  #app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex {
+    overflow: hidden;
+    margin-top: 1em;
+  }
+  #app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex p {
+    width: 50%;
+    float: left;
+  }
+  #app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex .entertainment {
+    background: url(../img/entertainment.png) no-repeat center 0;
+    background-size: auto 2.4rem;
+  }
+  #app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex .clothes {
+    background: url(../img/clothes.png) no-repeat center 0;
+    background-size: auto 2.4rem;
+  }
+  #app .wrap .screen_overlay .more .content .clude .include {
+    height: 60%;
+  }
+  #app .wrap .screen_overlay .more .content .clude .exclude {
+    height: 40%;
+  }
+  #app .wrap .screen_overlay .more .content .clude .exclude .clude_title h5 {
+    margin-top: 1em;
+  }
+  #app .wrap .screen_overlay .more .content .tuitionFee {
+    box-sizing: border-box;
+    padding-top: 2rem;
+  }
+  #app .wrap .screen_overlay .more .content .tuitionFee .title {
+    width: 80%;
+  }
+  #app .wrap .screen_overlay .more .content .tuitionFee .view_wrap {
+    width: 80%;
+  }
+  #app .wrap .screen_overlay .more .content .tuitionFee .remark {
+    font-size: 0.8rem;
+  }
+  #app .wrap .screen_overlay .more .content .costOfLiving {
+    box-sizing: border-box;
+    padding-top: 2rem;
+  }
+  #app .wrap .screen_overlay .more .content .costOfLiving .title {
+    width: 80%;
+  }
+  #app .wrap .screen_overlay .more .content .costOfLiving .view_wrap {
+    width: 80%;
+  }
+  #app .wrap .screen_overlay .more .content .costOfLiving .remark {
+    font-size: 0.8rem;
+  }
+  #app .wrap .screen_overlay .more .content .source .source_txt p {
+    font-size: 0.72rem;
+  }
+  #app .wrap .screen_overlay .more .index_btn {
+    background-color: #000;
+  }
+  #app .wrap .screen_overlay .more .index_btn ol li {
+    background-color: #fff;
+  }
+}

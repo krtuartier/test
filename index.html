@@ -1,43 +1,29 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8"/>
+   		<meta charset="utf-8">
+		<meta name="keywords" content="AVIVA"/>
+		<meta name="description" content="AVIVA"/>
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1, user-scalable=no,width=device-width,height=device-height"/>
+    	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<title>aviva</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/aviva.css"/>
+		<script src="js/vue2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue-router2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/aviva.js" type="text/javascript" charset="utf-8"></script>
 	</head>
-	<body>
-		<input type="button" name="" id="add" value="add" />
-		<input type="button" id="show" value="show" />
-		<div class="txt">
-			
+	<body style="overflow-x: hidden;">
+		<div id="app">
+			<transition :enter-active-class='enterClass' :leave-active-class='leaveClass'>
+		    	<router-view></router-view>
+		    </transition>
 		</div>
 	</body>
-	<script type="text/javascript">
-		var oAdd=document.getElementById('add');
-		var oShow=document.getElementById('show');
-		var oTxt=document.querySelector('.txt');
-		oAdd.onclick=function(){
-			var upDate={
-				'1':1,
-				'2':2,
-				'3':3,
-				'4':4,
-				'5':5,
-				'6':6
-			};
-			upDate=JSON.stringify(upDate);
-			window.sessionStorage.setItem('newData',upDate);
-		}
-		oShow.onclick=function(){
-			var newData=window.sessionStorage.getItem('newData');
-			if (newData) {
-				newData=JSON.parse(newData);
-				var oUl=document.createElement('ul');
-				var aLi='';
-				for (var i in newData) {
-					aLi+='<li>'+newData[i]+'</li>';
-				}
-				oUl.innerHTML=aLi;
-				oTxt.appendChild(oUl);
-			}
-		}
-	</script>
 </html>
