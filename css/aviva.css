@@ -1698,6 +1698,9 @@ a {
     float: none;
     width: 100%;
   }
+  #app .wrap .screen_overlay .more .content .clude .clude_con .clude_view {
+    font-size: 1rem;
+  }
   #app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex {
     overflow: hidden;
     margin-top: 1em;
