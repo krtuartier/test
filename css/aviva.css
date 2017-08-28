@@ -1704,14 +1704,18 @@ a {
     float: none;
     width: 100%;
   }
+  #app .wrap .screen_overlay .more .content .clude .clude_con .clude_title h5 {
+    font-size: 0.48rem;
+  }
   #app .wrap .screen_overlay .more .content .clude .clude_con .clude_view {
-    font-size: 1rem;
+    font-size: 0.48rem;
   }
   #app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex {
     overflow: hidden;
     margin-top: 1em;
   }
   #app .wrap .screen_overlay .more .content .clude .clude_con .clude_ex p {
+    font-size: 0.48rem;
     width: 50%;
     float: left;
   }
