@@ -1616,15 +1616,20 @@ a {
     margin-bottom: 2em;
   }
   #app .wrap .screen_overlay .askPage .content .con_part .tips {
+    font-size: 0.48rem;
     height: 2em;
     line-height: 2em;
   }
   #app .wrap .screen_overlay .askPage .content .ask_txt {
+    font-size: 0.48rem;
     height: auto;
     overflow-y: initial;
   }
   #app .wrap .screen_overlay .askPage .content .ask_txt .ask_mt1 .ask_pl {
     padding-left: 2em;
+  }
+  #app .wrap .screen_overlay .askPage .content .ask_tips {
+    font-size: 0.48rem;
   }
   #app .wrap .screen_overlay .askPage .content .ask_agree .check {
     width: 1.2rem;
@@ -1644,6 +1649,7 @@ a {
     border-left: none;
   }
   #app .wrap .screen_overlay .askPage .content .ask_agree .ask_agree_con {
+    font-size: 0.48rem;
     width: 90%;
   }
   #app .wrap .screen_overlay .askPage .content .btn {
