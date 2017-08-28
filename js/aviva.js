@@ -6430,7 +6430,7 @@ var source_chf = {
 };
 
 	var routes = [{
-			path: '/',
+			path: '*',
 			redirect: '/information/guide'
 		},
 
