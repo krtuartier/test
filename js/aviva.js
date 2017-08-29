@@ -25,7 +25,7 @@ function assets() {
 		enter: 18,
 		country: 0,
 		degree: 'General',
-		aside: null
+		aside: 0
 	}
 	var pieChart = {
 		'UK': {
@@ -1530,7 +1530,8 @@ window.onload = function() {
 							'age': age,
 							'enter': enter,
 							'country': country,
-							'degree': degree
+							'degree': degree,
+							'aside': 0
 						};
 						userData = JSON.stringify(userData);
 						window.sessionStorage.setItem('userinf', userData);
@@ -1894,7 +1895,8 @@ window.onload = function() {
 							'age': age,
 							'enter': enter,
 							'country': country,
-							'degree': degree
+							'degree': degree,
+							'aside': 0
 						};
 						userData = JSON.stringify(userData);
 						window.sessionStorage.setItem('userinf', userData);
@@ -2260,7 +2262,8 @@ window.onload = function() {
 							'age': age,
 							'enter': enter,
 							'country': country,
-							'degree': degree
+							'degree': degree,
+							'aside': 0
 						};
 						userData = JSON.stringify(userData);
 						window.sessionStorage.setItem('userinf', userData);
@@ -6639,7 +6642,10 @@ var source_chf = {
 			enterClass: '',
 			leaveClass: '',
 			routerArray: ['information', 'planned', 'showRes'],
-			routerIndex: 0
+			routerIndex: 0,
+			iStartX:0,
+			iMoveX:0,
+			iEndX:0
 		},
 		computed: {},
 		methods: {},
@@ -6665,5 +6671,58 @@ var source_chf = {
 				}
 			}
 		},
+		mounted(){
+			this.$el.addEventListener('touchstart',function(e){
+				var e=e||event;
+				if(this.$route.matched.length<=1){
+					this.iStartX=e.changedTouches[0].pageX
+				}
+			}.bind(this),false);
+			this.$el.addEventListener('touchmove',function(e){
+				var e=e||event;
+				if(this.$route.matched.length<=1){
+					this.iMoveX=e.changedTouches[0].pageX-this.iStartX;
+				}
+			}.bind(this),false);
+			this.$el.addEventListener('touchend',function(e){
+				var e=e||event;
+				var userData = window.sessionStorage.getItem('userinf');
+				if(this.$route.matched.length<=1&&userData){
+					var path=this.$route.fullPath+'';
+					var page=null;
+					var goPage=null;
+					this.iEndX=this.iMoveX/this.$el.clientWidth;
+					if(this.iEndX*2>1){
+						page=-1
+					}else if(this.iEndX*2<-1){
+						page=+1
+					}
+					for(var i = 0, len = this.routerArray.length; i < len; i++) {
+						if(path.indexOf(this.routerArray[i]) > -1) {
+							if((i+page)>=0&&(i+page)<=len){
+								goPage=this.routerArray[i+page];
+								this.iStartX=0;
+								this.iMoveX=0;
+								this.iEndX=0;
+							}
+						}
+					}
+					if(path.indexOf('_chf')>-1&&goPage){
+						router.push({
+							path: '/'+goPage+'_chf'
+						});
+					}else if(path.indexOf('_ch')>-1&&goPage){
+						router.push({
+							path: '/'+goPage+'_ch'
+						});
+					}else if(goPage){
+						router.push({
+							path: '/'+goPage
+						});
+					}
+				}
+			}.bind(this),false);
+		}
 	});
+	
 }
