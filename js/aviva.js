@@ -4524,7 +4524,10 @@ var more = {
 				'/showRes/more/costOfLiving',
 				'/showRes/more/source'
 			],
-			sIndex: 0
+			sIndex: 0,
+			iStartX:0,
+			iMoveX:0,
+			iEndX:0
 		}
 	},
 	computed: {},
@@ -4601,6 +4604,41 @@ var more = {
 		});
 		this.$refs.title.style.lineHeight = this.$refs.title.clientHeight + 'px';
 		this.$refs.indexBtnWrap.style.lineHeight = this.$refs.indexBtnWrap.clientHeight + 'px';
+		this.$el.addEventListener('touchstart',function(e){
+			var e=e||event;
+				this.iStartX=e.changedTouches[0].pageX;
+		}.bind(this),false);
+		this.$el.addEventListener('touchmove',function(e){
+				var e=e||event;
+					this.iMoveX=e.changedTouches[0].pageX-this.iStartX;
+		}.bind(this),false);
+		this.$el.addEventListener('touchend', function(e) {
+			var e = e || event;
+			this.iEndX = this.iMoveX / this.$el.clientWidth;
+			if(this.iEndX * 2 > 1) {
+				this.enterClass = 'animated zoomInLeft';
+				this.leaveClass = 'animated zoomOutRight';
+					this.iStartX=0;
+					this.iMoveX=0;
+					this.iEndX=0;
+				if(this.sIndex <= 0) {
+					this.sIndex = this.router.length - 1;
+				} else {
+					this.sIndex = this.sIndex - 1;
+				}
+			} else if(this.iEndX * 2 < -1) {
+				this.enterClass = 'animated zoomInRight';
+				this.leaveClass = 'animated zoomOutLeft';
+					this.iStartX=0;
+					this.iMoveX=0;
+					this.iEndX=0;
+				if(this.sIndex >= this.router.length - 1) {
+					this.sIndex = 0;
+				} else {
+					this.sIndex = this.sIndex + 1;
+				}
+			}
+		}.bind(this), false);
 	}
 };
 
@@ -4652,7 +4690,10 @@ var more_ch = {
 				'/showRes_ch/more_ch/costOfLiving_ch',
 				'/showRes_ch/more_ch/source_ch'
 			],
-			sIndex: 0
+			sIndex: 0,
+			iStartX:0,
+			iMoveX:0,
+			iEndX:0
 		}
 	},
 	computed: {},
@@ -4729,6 +4770,41 @@ var more_ch = {
 		});
 		this.$refs.title.style.lineHeight = this.$refs.title.clientHeight + 'px';
 		this.$refs.indexBtnWrap.style.lineHeight = this.$refs.indexBtnWrap.clientHeight + 'px';
+		this.$el.addEventListener('touchstart',function(e){
+			var e=e||event;
+				this.iStartX=e.changedTouches[0].pageX;
+		}.bind(this),false);
+		this.$el.addEventListener('touchmove',function(e){
+				var e=e||event;
+					this.iMoveX=e.changedTouches[0].pageX-this.iStartX;
+		}.bind(this),false);
+		this.$el.addEventListener('touchend', function(e) {
+			var e = e || event;
+			this.iEndX = this.iMoveX / this.$el.clientWidth;
+			if(this.iEndX * 2 > 1) {
+				this.enterClass = 'animated zoomInLeft';
+				this.leaveClass = 'animated zoomOutRight';
+					this.iStartX=0;
+					this.iMoveX=0;
+					this.iEndX=0;
+				if(this.sIndex <= 0) {
+					this.sIndex = this.router.length - 1;
+				} else {
+					this.sIndex = this.sIndex - 1;
+				}
+			} else if(this.iEndX * 2 < -1) {
+				this.enterClass = 'animated zoomInRight';
+				this.leaveClass = 'animated zoomOutLeft';
+					this.iStartX=0;
+					this.iMoveX=0;
+					this.iEndX=0;
+				if(this.sIndex >= this.router.length - 1) {
+					this.sIndex = 0;
+				} else {
+					this.sIndex = this.sIndex + 1;
+				}
+			}
+		}.bind(this), false);
 	}
 };
 
@@ -4780,7 +4856,10 @@ var more_chf = {
 				'/showRes_chf/more_chf/costOfLiving_chf',
 				'/showRes_chf/more_chf/source_chf'
 			],
-			sIndex: 0
+			sIndex: 0,
+			iStartX:0,
+			iMoveX:0,
+			iEndX:0
 		}
 	},
 	computed: {},
@@ -4857,6 +4936,41 @@ var more_chf = {
 		});
 		this.$refs.title.style.lineHeight = this.$refs.title.clientHeight + 'px';
 		this.$refs.indexBtnWrap.style.lineHeight = this.$refs.indexBtnWrap.clientHeight + 'px';
+		this.$el.addEventListener('touchstart',function(e){
+			var e=e||event;
+				this.iStartX=e.changedTouches[0].pageX;
+		}.bind(this),false);
+		this.$el.addEventListener('touchmove',function(e){
+				var e=e||event;
+					this.iMoveX=e.changedTouches[0].pageX-this.iStartX;
+		}.bind(this),false);
+		this.$el.addEventListener('touchend', function(e) {
+			var e = e || event;
+			this.iEndX = this.iMoveX / this.$el.clientWidth;
+			if(this.iEndX * 2 > 1) {
+				this.enterClass = 'animated zoomInLeft';
+				this.leaveClass = 'animated zoomOutRight';
+					this.iStartX=0;
+					this.iMoveX=0;
+					this.iEndX=0;
+				if(this.sIndex <= 0) {
+					this.sIndex = this.router.length - 1;
+				} else {
+					this.sIndex = this.sIndex - 1;
+				}
+			} else if(this.iEndX * 2 < -1) {
+				this.enterClass = 'animated zoomInRight';
+				this.leaveClass = 'animated zoomOutLeft';
+					this.iStartX=0;
+					this.iMoveX=0;
+					this.iEndX=0;
+				if(this.sIndex >= this.router.length - 1) {
+					this.sIndex = 0;
+				} else {
+					this.sIndex = this.sIndex + 1;
+				}
+			}
+		}.bind(this), false);
 	}
 };
 
